@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lockbox.SetupView"
+             Title="SetupView">
+    <VerticalStackLayout Padding="25">
+        <Label 
+            Text="Let's get set up!"
+            VerticalOptions="Center" 
+            FontSize="Title"
+            HorizontalOptions="Center"/>
+        <Grid>
+            <Entry
+                x:Name="masterpass"
+                Placeholder="Enter Password"
+                VerticalOptions="CenterAndExpand"
+                IsPassword="True"
+                MinimumWidthRequest="100"
+                MaxLength="64"/>
+            <Button
+                Text="Enter"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnSubmitClicked"
+        </Grid>
+        <Label
+            Text="Create a robust master password (8-64 characters long) for your password manager by combining random characters, including uppercase and lowercase letters, numbers, and symbols, while avoiding predictable patterns or personal information."
+            VerticalOptions="Center"
+            FontSize="Subtitle"
+            HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
